@@ -1,0 +1,234 @@
+/* Body background */
+body {
+  background-color: #f0eff2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.site-header {
+  background-color: #000;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.header-left {
+  padding: 5px;
+}
+
+.header-logo {
+  padding: 5px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+  margin-left: auto;
+}
+
+.header-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 3px;
+  white-space: nowrap;
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
+}
+
+.header-nav form {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-logout {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 3px;
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.btn-logout:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Monochrome calendar emoji */
+span[aria-hidden="true"] {
+  filter: grayscale(100%);
+  display: inline-block;
+}
+
+/* Page title and links */
+main h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+main > div {
+  text-align: center;
+  margin-top: 20px;
+}
+
+main > div:has(form) {
+  text-align: left;
+}
+
+main > div a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+main > div a:hover {
+  text-decoration: underline;
+}
+
+/* Form styles */
+main form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+main form > div {
+  margin-bottom: 20px;
+}
+
+main form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+main form input[type="text"],
+main form input[type="email"],
+main form input[type="password"],
+main form input[type="date"],
+main form input[type="time"],
+main form textarea,
+main form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+main form button[type="submit"] {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+main form button[type="submit"]:hover {
+  background-color: #333;
+}
+
+main form .error,
+main form div.error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Status badge */
+.status-badge-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #c8c8c8;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Clock display */
+.clock-display {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+#date-display {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+#time-display {
+  font-size: 3em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Clock buttons */
+.clock-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.clock-buttons form {
+  margin: 0;
+}
+
+.clock-buttons .btn-clock,
+.clock-buttons .btn-break {
+  padding: 12px 24px;
+  border-radius: 15px !important;
+  font-size: 16px;
+  cursor: pointer;
+  min-width: 100px;
+  box-sizing: border-box;
+}
+
+.clock-buttons .btn-clock {
+  border: 1px solid #000;
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.clock-buttons .btn-clock:hover {
+  background-color: #333 !important;
+}
+
+.clock-buttons .btn-break {
+  border: 1px solid #fff !important;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.clock-buttons .btn-break:hover {
+  background-color: #f0f0f0 !important;
+  border-color: #f0f0f0 !important;
+}
+

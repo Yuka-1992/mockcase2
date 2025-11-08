@@ -1,0 +1,37 @@
+# Docker
+docker/mysql/data/
+*.log
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.Zone.Identifier
+
+# Laravel (src配下)
+src/.env
+src/.env.backup
+src/.env.production
+src/vendor/
+src/node_modules/
+src/public/build/
+src/public/hot/
+src/storage/*.key
+src/.phpunit.cache/
+src/.phpunit.result.cache
+
+# Temporary files
+*.tmp
+*.bak
+

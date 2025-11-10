@@ -76,3 +76,5 @@ init:
 	$(DC) exec php php artisan key:generate || true
 	@make fresh
 	@make seed
+	$(DC) exec php npm install
+	$(DC) exec php npm run build

@@ -155,19 +155,20 @@ src/
 
 ### attendances（勤怠）
 
-| カラム名    | 型               | 制約                        | 説明                      |
-| ----------- | ---------------- | --------------------------- | ------------------------- |
-| id          | bigint unsigned  | PRIMARY KEY, AUTO_INCREMENT | 勤怠 ID                   |
-| user_id     | bigint unsigned  | NOT NULL, FOREIGN KEY       | ユーザー ID               |
-| work_date   | date             | NOT NULL                    | 勤務日                    |
-| clock_in    | datetime         | NOT NULL                    | 出勤時刻                  |
-| clock_out   | datetime         | NULL 許可                   | 退勤時刻                  |
-| break_time  | unsigned integer | DEFAULT 0                   | 休憩時間（分）            |
-| break_times | json             | NULL 許可                   | 個別休憩時間（JSON 配列） |
-| work_time   | unsigned integer | DEFAULT 0                   | 実働時間（分）            |
-| note        | text             | NULL 許可                   | 備考                      |
-| created_at  | timestamp        | NULL 許可                   | 作成日時                  |
-| updated_at  | timestamp        | NULL 許可                   | 更新日時                  |
+| カラム名         | 型               | 制約                        | 説明                               |
+| ---------------- | ---------------- | --------------------------- | ---------------------------------- |
+| id               | bigint unsigned  | PRIMARY KEY, AUTO_INCREMENT | 勤怠 ID                            |
+| user_id          | bigint unsigned  | NOT NULL, FOREIGN KEY       | ユーザー ID                        |
+| work_date        | date             | NOT NULL                    | 勤務日                             |
+| clock_in         | datetime         | NOT NULL                    | 出勤時刻                           |
+| clock_out        | datetime         | NULL 許可                   | 退勤時刻                           |
+| break_started_at | datetime         | NULL 許可                   | 休憩開始時刻（休憩中の一時保存用） |
+| break_time       | unsigned integer | DEFAULT 0                   | 休憩時間（分）                     |
+| break_times      | json             | NULL 許可                   | 個別休憩時間（JSON 配列）          |
+| work_time        | unsigned integer | DEFAULT 0                   | 実働時間（分）                     |
+| note             | text             | NULL 許可                   | 備考                               |
+| created_at       | timestamp        | NULL 許可                   | 作成日時                           |
+| updated_at       | timestamp        | NULL 許可                   | 更新日時                           |
 
 **インデックス**
 

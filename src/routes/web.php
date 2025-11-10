@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AttendanceController;
@@ -36,8 +35,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'index']);
-Route::get('/test', [PageController::class, 'test']);
+Route::get('/', function () {
+    return redirect('/login');
+});
 Route::get('/register', [UserRegisterController::class, 'create'])->name('register.create');
 Route::post('/register', [UserRegisterController::class, 'store'])->name('register.store');
 Route::get('/login', [UserAuthController::class, 'create'])->name('login');
